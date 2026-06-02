@@ -4,10 +4,10 @@ export const Header = () => {
       <div className="container-xl">
         <div className="row justify-content-center justify-content-md-between">
           <div className="col-8 col-md-3">
-            <a href="index.html">
+            <a href="/">
               <img
                 className="img-fluid"
-                src="./public/img/logo.svg"
+                src="/img/logo.svg"
                 alt="imagen logo"
               />
             </a>

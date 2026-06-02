@@ -1,6 +1,5 @@
-import { Footer } from "./components/Footer";
-import { Guitar } from "./components/Guitar";
-import { Header } from "./components/Header";
+import { useState } from "react";
+import { Header, Footer, Guitar } from "./components";
 
 function App() {
   return (
@@ -11,6 +10,12 @@ function App() {
         <h2 className="text-center">Nuestra Colección</h2>
 
         <div className="row mt-5">
+          <Guitar />
+          <Guitar />
+          <Guitar />
+          <Guitar />
+          <Guitar />
+          <Guitar />
           <Guitar />
           <Guitar />
           <Guitar />
