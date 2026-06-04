@@ -1,23 +1,29 @@
-export const Guitar = ({guitar}) => {
+export const Guitar = ({ guitar, addToCart }) => {
   return (
-    <div className="col-md-6 | col-lg-4 my-4 row align-items-center">
-      <div className="col-4">
-        <img
-          className="img-fluid"
-          src={guitar.url}
-          alt="imagen guitarra"
-        />
-      </div>
-      <div className="col-8">
-        <h3 className="text-black fs-4 fw-bold text-uppercase">{guitar.name}</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae
-          labore odit magnam in autem nesciunt, amet deserunt
-        </p>
-        <p className="fw-black text-primary fs-3">${guitar.price}</p>
-        <button type="button" className="btn btn-dark w-100">
-          Agregar al Carrito
-        </button>
+    <div className="col-md-6 col-lg-4 my-4">
+      <div className="card-guitar">
+        <div className="card-guitar-img">
+          <img
+            className="img-fluid"
+            src={`/img/${guitar.image}.jpg`}
+            alt={guitar.name}
+          />
+        </div>
+        <div className="card-guitar-body">
+          <h3 className="card-guitar-name">{guitar.name}</h3>
+          <span className="card-guitar-tag">Guitarra Eléctrica</span>
+          <p className="card-guitar-desc">{guitar.description}</p>
+          <div className="card-guitar-footer">
+            <span className="card-guitar-price">${guitar.price}</span>
+            <button
+              type="button"
+              className="btn btn-guitar"
+              onClick={() => addToCart(guitar)}
+            >
+              Agregar al Carrito
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
